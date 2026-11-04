@@ -1,0 +1,1225 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>تقرير ندوة الأمن الفكري</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: one long RTL report laid on the presentation's radial green field; gold-hairline glass panels and four-point sparkles echo the slides. */
+:root{
+  color-scheme: dark;
+  --field-hi:#1C7C59; --field-mid:#105640; --field-lo:#072C21; --abyss:#052219;
+  --forest:#0A3A2B; --pine:#0E4A37;
+  --gold:#E2C88F; --gold-deep:#B8975A; --gold-pale:#F3E6C4;
+  --mint:#CFE9DD; --sage:#7FC8A9; --emerald:#2FA37A;
+  --ink:#FFFFFF; --ink-2:#D7E9E0; --ink-3:#A3C7B7;
+  --glass:rgba(255,255,255,.07); --glass-soft:rgba(255,255,255,.04); --line:rgba(255,255,255,.16);
+  --gold-glass:rgba(226,200,143,.12); --gold-line:rgba(226,200,143,.6); --gold-hair:rgba(226,200,143,.32);
+  --emerald-glass:rgba(47,163,122,.5);
+  --nav-bg:rgba(7,44,33,.78); --scrim:rgba(3,20,15,.92);
+  --shadow:0 30px 60px -34px rgba(1,14,10,.9);
+  --f-display:'Amiri','Traditional Arabic','Times New Roman',serif;
+  --f-body:'IBM Plex Sans Arabic','Segoe UI',Tahoma,'Geeza Pro',sans-serif;
+  --f-quran:'Amiri Quran','Amiri','Traditional Arabic',serif;
+  --f-ruqaa:'Aref Ruqaa','Amiri','Traditional Arabic',serif;
+  --r-lg:22px; --r-md:16px; --r-sm:12px;
+  --gutter:max(clamp(16px,4vw,40px), env(safe-area-inset-left,0px));
+  --gutter-r:max(clamp(16px,4vw,40px), env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--field-lo);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.9;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.field{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(140% 115% at 85% 12%, var(--field-hi) 0%, var(--field-mid) 42%, var(--field-lo) 100%)}
+.field::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 8% 100%, rgba(5,34,25,.55), transparent 70%)}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.3}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.spark{display:inline-block;width:1em;height:1em;fill:currentColor;flex:none}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- transitions ---------- */
+:root{--ease-out:cubic-bezier(.2,.7,.2,1);--ease-draw:cubic-bezier(.6,.05,.2,1);--ease-pop:cubic-bezier(.3,1.6,.5,1)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+@keyframes draw{from{transform:scaleX(0)}}
+@keyframes artIn{from{opacity:0;transform:scale(.9) rotate(-8deg)}}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes panelIn{from{opacity:0;transform:translateY(16px)}}
+/* cover: plays once on load */
+.hero-art{animation:artIn 1.9s var(--ease-out) both}
+.hero .school{animation:up .9s .15s var(--ease-out) both}
+.hero .pill{animation:up .9s .3s var(--ease-out) both}
+.hero h1 span:first-child{animation:up 1s .45s var(--ease-out) both}
+.hero h1 span:last-child{animation:up 1s .62s var(--ease-out) both}
+.hero .rule i{transform-origin:right;animation:draw 1.1s .9s var(--ease-draw) both}
+.hero .rule .spark{animation:pop .55s var(--ease-pop) both}
+.hero .rule .spark:nth-child(1){animation-delay:1.35s}
+.hero .rule .spark:nth-child(2){animation-delay:1.47s}
+.hero .rule .spark:nth-child(3){animation-delay:1.59s}
+.hero .tagline{animation:up 1s 1.1s var(--ease-out) both}
+.hero .when{animation:up 1s 1.3s var(--ease-out) both}
+/* sections and cards: rise in as they reach the screen (added by script only when motion is allowed) */
+.js .rv{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease-out),transform 1s var(--ease-out);transition-delay:calc(var(--d,0) * 110ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .sec-head.rv .rule i{transform:scaleX(0);transform-origin:right;transition:transform 1.2s var(--ease-draw) .35s}
+.js .sec-head.rv.in .rule i{transform:none}
+.js .sec-head.rv .rule .spark{opacity:0;transform:scale(.2) rotate(-90deg);transition:opacity .5s ease,transform .6s var(--ease-pop)}
+.js .sec-head.rv.in .rule .spark{opacity:1;transform:none}
+.js .sec-head.rv.in .rule .spark:nth-child(1){transition-delay:1s}
+.js .sec-head.rv.in .rule .spark:nth-child(2){transition-delay:1.12s}
+.js .sec-head.rv.in .rule .spark:nth-child(3){transition-delay:1.24s}
+.js .prayer.rv h2{transform:scale(.94);transition:transform 1.4s var(--ease-out) .2s}
+.js .prayer.rv.in h2{transform:none}
+.axis:not([hidden]){animation:panelIn .55s var(--ease-out)}
+.lb:not([hidden]){animation:fadeIn .3s ease}
+.lb:not([hidden]) img{animation:panelIn .45s var(--ease-out)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:clip;padding-block:clamp(48px,7vw,96px) clamp(40px,6vw,80px)}
+.hero-art{position:absolute;top:-6%;inset-inline-start:-4%;width:min(50vw,640px);height:112%;pointer-events:none}
+.hero-art svg{width:100%;height:100%}
+.hero-art{-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 97%);mask-image:linear-gradient(to bottom,#000 70%,transparent 97%)}
+.hero-text{position:relative;max-width:700px;margin-inline-start:auto}
+.school{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:.95rem;font-weight:500;margin-bottom:22px}
+.school b{color:var(--gold);font-weight:600}
+.school i{width:5px;height:5px;border-radius:50%;background:var(--gold-line)}
+.pill{display:inline-flex;align-items:center;padding:3px 18px;border:1px solid var(--gold-line);border-radius:999px;color:var(--gold);font-weight:600;font-size:.95rem}
+.hero h1{margin-top:16px;font-size:clamp(2.7rem,1.4rem + 4.8vw,5.3rem);line-height:1.22;color:var(--gold);padding-bottom:.1em}
+.hero h1 span{display:block;width:fit-content;max-width:100%;background:linear-gradient(175deg,var(--gold-pale) 10%,var(--gold) 52%,var(--gold-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.rule{display:flex;align-items:center;gap:14px;margin-block:18px 14px;max-width:560px}
+.rule i{flex:1;height:1px;background:linear-gradient(to left,var(--ink),rgba(255,255,255,.2))}
+.rule .stars{display:flex;gap:9px;color:var(--ink)}
+.rule .spark{width:15px;height:15px}
+.tagline{font-family:var(--f-ruqaa);font-size:clamp(1.5rem,1.05rem + 1.6vw,2.25rem);color:var(--ink);line-height:1.7}
+.when{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;margin-top:34px;border-top:1px solid var(--gold-hair);border-bottom:1px solid var(--gold-hair)}
+.when div{padding:12px 20px;border-inline-start:1px solid var(--gold-hair)}
+.when div:first-child{border-inline-start:0;padding-inline-start:0}
+.when dt{font-size:.78rem;color:var(--ink-3);font-weight:500}
+.when dd{margin:0;font-weight:600;color:var(--ink);font-size:.98rem;line-height:1.6}
+.when dd small{display:block;font-weight:400;color:var(--ink-2);font-size:.82rem}
+@media (max-width:860px){
+  .hero{padding-bottom:24px}
+  .hero-art{width:340px;height:420px;top:-30px;inset-inline-start:-90px;opacity:.4}
+  .hero-text{margin-inline-start:0}
+  .when{grid-template-columns:1fr 1fr;justify-content:stretch}
+  .when div{border-inline-start:0;padding-inline:0 12px;border-top:1px solid var(--gold-hair)}
+  .when div:nth-child(-n+2){border-top:0}
+  .when div:nth-child(even){border-inline-start:1px solid var(--gold-hair);padding-inline-start:14px}
+}
+@keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
+.tw{transform-box:fill-box;transform-origin:center;animation:twinkle 4.8s ease-in-out infinite}
+.tw2{animation-delay:-1.6s;animation-duration:3.9s}.tw3{animation-delay:-2.7s;animation-duration:5.6s}.tw4{animation-delay:-.8s;animation-duration:4.3s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.slowspin{transform-box:fill-box;transform-origin:center;animation:spin 120s linear infinite}
+
+/* ---------- sections ---------- */
+.sec{position:relative;overflow:clip;padding-block:clamp(56px,7.5vw,104px)}
+.sec + .sec{border-top:1px solid rgba(226,200,143,.12)}
+.sec-head{margin-bottom:clamp(28px,4vw,44px);max-width:760px}
+.kicker{color:var(--gold);font-weight:600;font-size:1rem;line-height:1.6}
+.sec-head h2{font-size:clamp(2rem,1.35rem + 2.3vw,3.05rem);color:var(--ink);margin-top:2px}
+.sec-head .rule{margin-block:14px 0;max-width:340px}
+.sec-head .rule .spark{width:12px;height:12px}
+.lede{color:var(--ink-2);margin-top:14px;max-width:66ch}
+.orn{position:absolute;pointer-events:none;color:var(--gold);opacity:.85}
+.orn .spark{position:absolute}
+
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:var(--r-lg)}
+.gpanel{background:var(--gold-glass);border:1px solid var(--gold-line);border-radius:var(--r-lg)}
+.card{background:rgba(255,255,255,.08);border:1px solid var(--gold-hair);border-radius:var(--r-md)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 14px;border-radius:999px;background:var(--gold);color:var(--forest);font-weight:700;font-size:.85rem;line-height:1.8;white-space:nowrap}
+.badge{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--forest);font-weight:700;font-size:1.15rem;flex:none;font-family:var(--f-body)}
+
+/* ---------- overview ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:clamp(36px,5vw,56px);border-block:1px solid var(--gold-hair)}
+.stats div{padding:18px 22px;border-inline-start:1px solid var(--gold-hair);display:flex;align-items:baseline;gap:12px}
+.stats div:first-child{border-inline-start:0}
+.stats b{font-family:var(--f-display);font-size:clamp(2.4rem,1.8rem + 1.6vw,3.2rem);color:var(--gold);line-height:1}
+.stats span{color:var(--ink-2);font-size:.95rem;line-height:1.5}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stats div{border-inline-start:0;padding-inline:0 10px}.stats div:nth-child(even){border-inline-start:1px solid var(--gold-hair);padding-inline-start:16px}.stats div:nth-child(n+3){border-top:1px solid var(--gold-hair)}}
+.ov-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+.ov-main{display:flex;flex-direction:column;gap:26px;min-width:0}
+.summary{color:var(--ink-2);font-size:1.08rem;max-width:62ch}
+.summary strong{color:var(--ink);font-weight:600}
+.opening{padding:clamp(22px,3vw,34px);position:relative}
+.opening .spark{color:var(--gold);width:22px;height:22px;display:block;margin:0 auto 10px}
+.opening .who{font-size:.85rem;color:var(--ink-3);text-align:center}
+.opening blockquote{margin:6px 0 0;font-family:var(--f-display);font-weight:700;color:var(--gold);font-size:clamp(1.45rem,1.1rem + 1.1vw,2rem);line-height:1.55;text-align:center;text-wrap:balance}
+.opening hr{border:0;height:1px;background:var(--gold-hair);margin:18px auto;width:60%}
+.opening p{color:var(--ink-2);text-align:center;max-width:58ch;margin-inline:auto}
+.facts{padding:clamp(20px,2.6vw,30px)}
+.facts h3{font-size:1.45rem;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.facts h3 .spark{width:16px;height:16px}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.facts dt,.facts dd{padding-block:11px;border-top:1px solid rgba(255,255,255,.1);margin:0;line-height:1.6}
+.facts dt{color:var(--ink-3);font-size:.9rem;padding-inline-end:18px;white-space:nowrap}
+.facts dd{color:var(--ink);font-weight:500}
+.facts dd small{display:block;color:var(--ink-2);font-weight:400;font-size:.85rem}
+.facts dl > :nth-child(-n+2){border-top:0}
+.goals{margin-top:clamp(36px,5vw,56px)}
+.goals h3{font-size:1.5rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.goals h3 .spark{color:var(--gold);width:16px;height:16px}
+.goals ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.goals li{padding:18px 18px 20px;color:var(--ink-2);font-size:.95rem;line-height:1.75;display:flex;flex-direction:column;gap:10px}
+.goals li .spark{color:var(--gold);width:14px;height:14px}
+@media (max-width:1020px){.goals ul{grid-template-columns:1fr}.goals li{flex-direction:row;align-items:baseline}}
+@media (max-width:900px){.ov-grid{grid-template-columns:1fr}}
+
+/* ---------- program timeline ---------- */
+.timeline{max-width:880px;position:relative}
+.timeline::before{content:"";position:absolute;top:22px;bottom:22px;inset-inline-start:20px;width:1px;background:linear-gradient(to bottom,var(--gold-line),rgba(226,200,143,.15))}
+.step{position:relative;display:grid;grid-template-columns:42px minmax(0,1fr);gap:20px;padding-block:14px}
+.step .badge{position:relative;z-index:1;box-shadow:0 0 0 6px var(--field-mid)}
+.step h3{font-size:1.4rem;color:var(--ink);line-height:1.45}
+.step h3 small{display:block;font-family:var(--f-body);font-size:.85rem;color:var(--gold);font-weight:600;margin-bottom:2px}
+.step p{color:var(--ink-2);margin-top:4px;font-size:.98rem}
+.step .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gold-hair);border-radius:999px;padding:0 12px;font-size:.8rem;color:var(--ink-2);line-height:1.9}
+.go{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:600;font-size:.88rem;text-decoration:none;border-bottom:1px solid transparent}
+.go:hover{border-bottom-color:var(--gold)}
+.interlude{position:relative;display:grid;grid-template-columns:42px minmax(0,1fr);gap:20px;padding-block:4px;color:var(--ink-3);font-size:.9rem;align-items:center}
+.interlude .gem{justify-self:center;width:14px;height:14px;transform:rotate(45deg);border:1px solid var(--gold);background:var(--field-mid);position:relative;z-index:1}
+
+/* ---------- axes ---------- */
+.tablist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:22px}
+.tab{display:flex;align-items:center;gap:12px;text-align:start;padding:14px 16px;background:rgba(255,255,255,.06);border:1px solid var(--gold-hair);border-radius:var(--r-md);transition:background .25s,border-color .25s,transform .25s}
+.tab:hover{background:rgba(255,255,255,.1)}
+.tab .badge{width:38px;height:38px;font-size:1.05rem;background:transparent;color:var(--gold);border:1px solid var(--gold-line);transition:background .25s,color .25s}
+.tab span{display:flex;flex-direction:column;line-height:1.45;min-width:0}
+.tab small{color:var(--gold);font-size:.8rem;font-weight:600}
+.tab b{font-weight:600;font-size:.95rem;color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--gold-glass);border-color:var(--gold)}
+.tab[aria-selected="true"] .badge{background:var(--gold);color:var(--forest)}
+@media (max-width:900px){.tablist{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.tab{padding:12px}.tab .badge{width:32px;height:32px;font-size:.95rem}.tab b{font-size:.88rem}}
+.axis{padding:clamp(20px,3.2vw,40px)}
+.axis-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(22px,3.4vw,44px);align-items:start}
+.axis-main,.axis-side{display:flex;flex-direction:column;gap:22px;min-width:0}
+.axis-title{font-size:clamp(1.7rem,1.3rem + 1.4vw,2.35rem);margin-bottom:-6px}
+.axis-title small{display:block;font-family:var(--f-body);font-size:.95rem;color:var(--gold);font-weight:600}
+.concept{position:relative;padding:28px 22px 20px;background:var(--glass-soft);border:1px solid var(--line);border-radius:var(--r-md);color:var(--ink);font-size:1.05rem}
+.concept .chip{position:absolute;top:-14px;inset-inline-start:20px}
+.sub{font-family:var(--f-display);font-size:1.3rem;color:var(--gold);display:flex;align-items:center;gap:8px}
+.sub .spark{width:13px;height:13px}
+.ticks{display:flex;flex-direction:column;gap:10px}
+.ticks li{display:grid;grid-template-columns:16px 1fr;gap:12px;color:var(--ink-2);line-height:1.75}
+.ticks li .spark{color:var(--gold);width:13px;height:13px;margin-top:.55em}
+.example{border-inline-start:2px solid var(--gold);padding:4px 18px 4px 0;padding-inline:18px 0;color:var(--ink-2);font-size:.98rem}
+.example b{display:block;color:var(--gold);font-size:.85rem;font-weight:600;margin-bottom:2px}
+.callout{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:18px 20px;background:var(--gold-glass);border:1px solid var(--gold-line);border-radius:var(--r-md);color:var(--ink);font-weight:500}
+.callout .spark{color:var(--gold);width:20px;height:20px;margin-top:.35em}
+.signs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.signs li{padding:16px 12px 14px;text-align:center;font-weight:600;font-size:.93rem;line-height:1.6;display:flex;flex-direction:column;align-items:center;gap:8px}
+.signs li .spark{color:var(--gold);width:16px;height:16px}
+@media (max-width:560px){.signs{grid-template-columns:1fr 1fr}}
+.risks{display:grid;grid-template-columns:1fr;gap:8px}
+.risks li{padding:10px 14px;display:flex;align-items:center;gap:14px;font-weight:600;font-size:.97rem;line-height:1.6}
+.risks .badge{width:34px;height:34px;font-size:.95rem}
+.practices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.practices li{padding:24px 14px 14px;position:relative;text-align:center;color:var(--ink-2);font-size:.92rem;line-height:1.7;margin-top:12px}
+.practices .chip{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:.82rem}
+@media (max-width:640px){.practices{grid-template-columns:1fr 1fr}}
+@media (max-width:380px){.practices{grid-template-columns:1fr}}
+.verse{padding:24px 20px 18px;text-align:center}
+.verse .lead{color:var(--ink-2);font-size:.95rem}
+.verse q{display:block;quotes:none;font-family:var(--f-quran);color:var(--gold);font-size:clamp(1.55rem,1.2rem + 1.2vw,2.1rem);line-height:2.1;margin-top:6px}
+.verse cite{display:block;font-style:normal;color:var(--ink-3);font-size:.9rem}
+.verse .lesson{color:var(--ink-2);font-size:.95rem;margin-top:12px;padding-top:12px;border-top:1px solid var(--gold-hair)}
+.question{padding:22px 20px 20px;background:var(--gold-glass);border:1px solid var(--gold-line);border-radius:var(--r-lg)}
+.question .qhead{display:flex;align-items:center;gap:12px;color:var(--gold);font-weight:600;font-size:.95rem;margin-bottom:12px}
+.question .qmark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--forest);font-family:var(--f-display);font-weight:700;font-size:1.7rem;line-height:1;flex:none}
+.question .qtext{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,1.1rem + .6vw,1.6rem);line-height:1.6;color:var(--ink)}
+.reveal{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:7px 18px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-weight:600;font-size:.9rem;transition:background .2s,color .2s}
+.reveal:hover{background:var(--gold);color:var(--forest)}
+.reveal[aria-expanded="true"]{background:var(--gold);color:var(--forest)}
+.reveal svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+.answer{margin-top:14px;padding:14px 16px;border-radius:var(--r-sm);background:rgba(7,44,33,.55);border:1px dashed var(--gold-hair);color:var(--ink);animation:rise .35s ease}
+.answer b{display:block;color:var(--gold);font-size:.82rem;font-weight:600}
+@keyframes rise{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+.rings{display:block;width:100%;max-width:340px;margin-inline:auto;height:auto}
+.rings text{font-family:var(--f-body);font-weight:600}
+@media (max-width:900px){.axis-grid{grid-template-columns:1fr}}
+
+/* ---------- survey ---------- */
+.sv-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:clamp(22px,3.4vw,44px);align-items:start}
+.sv-card{padding:clamp(20px,2.6vw,30px);display:flex;flex-direction:column;gap:16px}
+.sv-card .t{font-family:var(--f-display);font-weight:700;color:var(--gold);font-size:1.4rem;line-height:1.55}
+.sv-card .lbl{color:var(--ink-3);font-size:.85rem;font-weight:500}
+.sv-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sv-pair div{background:var(--gold);color:var(--forest);border-radius:var(--r-sm);padding:12px 14px;line-height:1.5}
+.sv-pair small{display:block;font-size:.8rem;font-weight:600;opacity:.8}
+.sv-pair b{font-size:1.15rem}
+.chart{padding:clamp(20px,2.8vw,32px)}
+.chart-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px;margin-bottom:8px}
+.chart-head h3{font-size:1.45rem}
+.legend{display:flex;align-items:center;gap:14px;color:var(--ink-3);font-size:.82rem}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-inline-end:6px}
+.legend .f{background:var(--gold)}.legend .e{border:1px solid rgba(255,255,255,.35)}
+.metrics{display:flex;flex-direction:column}
+.metric{padding:16px 12px;margin-inline:-12px;border-radius:var(--r-sm);border-top:1px solid rgba(255,255,255,.08);transition:background .2s;outline-offset:-2px}
+.metric:first-child{border-top:0}
+.metric:hover,.metric:focus-visible{background:rgba(255,255,255,.05)}
+.m-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.m-label{font-weight:600;color:var(--ink);line-height:1.5}
+.m-val{font-family:var(--f-display);font-weight:700;color:var(--gold);font-size:2rem;line-height:1;white-space:nowrap}
+.dots{display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:clamp(2px,.5vw,5px);direction:rtl}
+.dots i{aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.3)}
+.dots i.on{background:var(--gold);border-color:var(--gold)}
+.dots.play i.on{animation:pop .5s cubic-bezier(.3,1.6,.5,1) backwards;animation-delay:calc(var(--k) * 28ms)}
+@keyframes pop{from{transform:scale(0);opacity:0}}
+.m-foot{margin-top:8px;color:var(--ink-3);font-size:.85rem}
+.m-foot b{color:var(--ink-2);font-weight:600}
+.insight{margin-top:18px;display:grid;grid-template-columns:22px 1fr;gap:12px;padding:16px 18px;border-radius:var(--r-md);background:var(--gold-glass);border:1px solid var(--gold-line);font-weight:500}
+.insight .spark{color:var(--gold);width:18px;height:18px;margin-top:.4em}
+.recs{margin-top:clamp(36px,5vw,56px)}
+.recs h3{font-size:1.5rem;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.recs h3 .spark{color:var(--gold);width:16px;height:16px}
+.recs ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.recs li{padding:18px;display:flex;flex-direction:column;gap:10px;color:var(--ink-2);font-size:.95rem;line-height:1.75}
+.recs .chip{align-self:flex-start;background:transparent;color:var(--gold);border:1px solid var(--gold-line);font-weight:600}
+@media (max-width:1000px){.recs ul{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.sv-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.recs ul{grid-template-columns:1fr}}
+
+/* ---------- what-if ---------- */
+.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-bottom:28px;border-block:1px solid var(--gold-hair)}
+.method li{padding:14px 16px;display:flex;gap:10px;align-items:baseline;border-inline-start:1px solid var(--gold-hair);color:var(--ink-2);font-size:.92rem;line-height:1.6}
+.method li:first-child{border-inline-start:0;padding-inline-start:0}
+.method b{font-family:var(--f-display);color:var(--gold);font-size:1.5rem;line-height:1}
+@media (max-width:820px){.method{grid-template-columns:1fr 1fr}.method li{border-inline-start:0;padding-inline:0 10px}.method li:nth-child(even){border-inline-start:1px solid var(--gold-hair);padding-inline-start:14px}.method li:nth-child(n+3){border-top:1px solid var(--gold-hair)}}
+.wi-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.progress{display:flex;align-items:center;gap:12px;color:var(--ink-2);font-size:.92rem}
+.pips{display:flex;gap:6px}
+.pips i{width:22px;height:6px;border-radius:3px;background:rgba(255,255,255,.18);transition:background .3s}
+.pips i.on{background:var(--gold)}
+.ghost{padding:6px 16px;border-radius:999px;border:1px solid var(--gold-hair);background:transparent;color:var(--ink-2);font-size:.88rem;font-weight:500}
+.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.wi-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.wi{grid-column:span 2;display:flex;flex-direction:column;padding:28px 20px 18px;position:relative;margin-top:14px;background:rgba(255,255,255,.07);border:1px solid var(--gold-hair);border-radius:var(--r-md);transition:border-color .3s,background .3s}
+.wi:nth-child(n+4){grid-column:span 3}
+.wi.done{border-color:var(--gold-line);background:rgba(226,200,143,.08)}
+.wi .chip{position:absolute;top:-14px;inset-inline-start:18px}
+.wi .sit{font-weight:600;color:var(--ink);font-size:1.02rem;line-height:1.75}
+.wi .ask{font-family:var(--f-display);font-weight:700;color:var(--gold);font-size:1.3rem;margin-top:8px}
+.wi .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px}
+.wi .reveal{margin-top:0}
+.timer{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--gold-hair);background:transparent;color:var(--ink-2);font-size:.88rem;font-weight:500}
+.timer:hover{border-color:var(--gold);color:var(--gold)}
+.timer .ring{--p:0;width:18px;height:18px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p)*1%),rgba(255,255,255,.18) 0);display:inline-block;-webkit-mask:radial-gradient(circle,transparent 4px,#000 5px);mask:radial-gradient(circle,transparent 4px,#000 5px)}
+.timer.run{color:var(--gold);border-color:var(--gold)}
+.wi .answer{margin-top:14px}
+@media (max-width:900px){.wi-grid{grid-template-columns:1fr 1fr}.wi,.wi:nth-child(n+4){grid-column:span 1}.wi:last-child{grid-column:1/-1}}
+@media (max-width:600px){.wi-grid{grid-template-columns:1fr}.wi:last-child{grid-column:auto}}
+
+/* ---------- closing ---------- */
+.close-panel{padding:clamp(26px,4vw,48px);text-align:center;max-width:960px;margin-inline:auto}
+.close-panel .statement{font-family:var(--f-display);font-weight:700;font-size:clamp(1.5rem,1.15rem + 1.3vw,2.2rem);line-height:1.65;color:var(--ink);text-wrap:balance}
+.close-panel .statement em{font-style:normal;color:var(--gold)}
+.close-panel p.more{color:var(--ink-2);margin:18px auto 0;max-width:62ch}
+.lead-in{margin-top:34px;text-align:center;font-family:var(--f-display);color:var(--gold);font-size:1.5rem;font-weight:700}
+.vows{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:14px}
+.vows li{padding:9px 24px;border-radius:999px;border:1px solid var(--gold-line);font-weight:700;font-size:1rem}
+.vows li:nth-child(odd){background:var(--gold);color:var(--forest)}
+.vows li:nth-child(even){background:var(--emerald-glass);color:var(--ink)}
+.prayer{position:relative;margin-top:clamp(48px,7vw,84px);text-align:center;padding-block:clamp(40px,6vw,72px)}
+.prayer svg.halo{position:absolute;inset:0;margin:auto;width:min(560px,100%);height:100%;pointer-events:none}
+.prayer h2{position:relative;font-family:var(--f-ruqaa);font-weight:700;font-size:clamp(2.6rem,1.6rem + 4vw,4.6rem);color:var(--gold);line-height:1.5}
+.prayer .rule{justify-content:center;margin:6px auto 14px;max-width:420px}
+.prayer p{position:relative;color:var(--ink);font-size:1.12rem;max-width:44ch;margin-inline:auto}
+
+/* ---------- gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;gap:14px}
+.shot{position:relative;display:block;padding:0;border:1px solid var(--gold-hair);border-radius:var(--r-md);overflow:hidden;background:var(--abyss);text-align:start}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.shot:hover img{transform:scale(1.035)}
+.shot .cap{position:absolute;inset:auto 0 0 0;padding:28px 16px 12px;background:linear-gradient(to top,rgba(3,20,15,.92),transparent);line-height:1.5}
+.shot .cap b{display:block;color:var(--gold);font-weight:600;font-size:.95rem}
+.shot .cap span{display:block;color:var(--ink-2);font-size:.82rem}
+.shot.inv{grid-row:span 2}
+.shot.rec,.shot.hall{aspect-ratio:4/3}
+.shot.att{grid-column:span 2;aspect-ratio:2.12/1;background:#EDEDED}
+.shot.att img{object-fit:contain}
+@media (max-width:860px){.gallery{grid-template-columns:1fr 1fr}.shot.inv{grid-row:auto;aspect-ratio:864/1217}.shot.att{grid-column:1/-1}}
+@media (max-width:520px){.gallery{grid-template-columns:1fr}}
+
+/* ---------- team ---------- */
+.team{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px}
+.team .panel{padding:clamp(20px,2.8vw,32px)}
+.team h3{font-size:1.45rem;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.team h3 .spark{color:var(--gold);width:15px;height:15px}
+.names{display:flex;flex-wrap:wrap;gap:10px}
+.names li{padding:6px 18px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--gold-hair);font-weight:500}
+.mentor{margin-top:22px;padding:14px 18px;border:1px solid var(--gold-line);border-radius:var(--r-sm);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.mentor small{color:var(--ink-3);font-size:.88rem}
+.mentor b{font-family:var(--f-display);font-size:1.4rem;color:var(--gold)}
+.parents li{display:flex;justify-content:space-between;align-items:center;padding-block:10px;border-top:1px solid rgba(255,255,255,.1);font-weight:500}
+.parents li:first-child{border-top:0}
+.parents li span{color:var(--ink-3);font-size:.82rem;font-weight:400}
+.parents .ghost{margin-top:16px}
+@media (max-width:860px){.team{grid-template-columns:1fr}}
+
+footer{padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--gold-hair);color:var(--ink-3);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
+footer b{color:var(--gold);font-weight:600}
+
+/* ---------- presentation viewer ---------- */
+.viewer{max-width:1080px;margin-inline:auto}
+.stage{position:relative;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--gold-hair);box-shadow:var(--shadow),0 0 0 6px rgba(226,200,143,.05);background:var(--abyss);touch-action:pan-y}
+.stage:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.frame{position:relative;aspect-ratio:16/9;width:100%;max-width:100%}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease,transform .8s var(--ease-out);user-select:none;-webkit-user-drag:none}
+.slide.cur{opacity:1;transform:none}
+.media{position:absolute;inset:0;pointer-events:none}
+.media > *{pointer-events:auto}
+.mbox{position:absolute;display:grid;place-items:center;align-content:center;gap:10px}
+.mbox video{width:100%;height:100%;object-fit:cover;background:#000;display:block}
+.play{display:grid;place-items:center;width:clamp(52px,9vw,88px);height:clamp(52px,9vw,88px);border-radius:50%;border:1px solid var(--gold);background:rgba(7,44,33,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--gold);box-shadow:0 0 0 8px rgba(226,200,143,.12);transition:transform .25s var(--ease-out),background .25s,color .25s;animation:breathe 2.6s ease-in-out infinite}
+.play:hover{transform:scale(1.07);background:var(--gold);color:var(--forest)}
+.play svg{width:42%;height:42%;fill:currentColor}
+.mlabel{background:rgba(3,20,15,.75);color:var(--ink);font-size:clamp(.7rem,1.4vw,.85rem);padding:2px 12px;border-radius:999px;pointer-events:none}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 6px rgba(226,200,143,.14)}50%{box-shadow:0 0 0 14px rgba(226,200,143,.04)}}
+.abtn{position:absolute;border-radius:10px;border:1px solid var(--gold-line);background:rgba(226,200,143,.08);padding:0;animation:breathe 2.6s ease-in-out infinite}
+.abtn:hover,.abtn.on{background:rgba(226,200,143,.25);border-color:var(--gold)}
+.abtn .alabel{position:absolute;top:50%;left:calc(100% + 8px);transform:translateY(-50%);white-space:nowrap;background:rgba(3,20,15,.8);color:var(--gold);font-size:clamp(.62rem,1.3vw,.8rem);font-weight:600;padding:1px 10px;border-radius:999px;pointer-events:none}
+.side{position:absolute;top:50%;transform:translateY(-50%);z-index:2;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold-hair);background:rgba(7,44,33,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--ink);opacity:0;transition:opacity .3s,background .2s,color .2s}
+.side svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.side:hover{background:var(--gold);color:var(--forest)}
+.stage:hover .side,.stage:focus-within .side{opacity:1}
+.side.prev{right:12px}.side.next{left:12px}
+.side[disabled]{opacity:0!important;pointer-events:none}
+@media (hover:none){.side{opacity:.9;width:38px;height:38px}.side svg{width:18px;height:18px}}
+.deck-bar{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;margin-top:16px}
+.deck-meta{display:flex;align-items:baseline;gap:14px;min-width:0}
+.dcount{font-family:var(--f-display);font-weight:700;color:var(--gold);font-size:1.4rem;white-space:nowrap;line-height:1.3}
+.dtitle{color:var(--ink-2);font-size:.98rem;line-height:1.6;min-width:0}
+.deck-ctrls{display:flex;gap:8px;flex:none}
+.dprog{height:2px;background:rgba(255,255,255,.12);border-radius:2px;margin-top:12px;overflow:hidden}
+.dprog i{display:block;height:100%;width:0;background:linear-gradient(to left,var(--gold-pale),var(--gold-deep));transition:width .6s var(--ease-out)}
+.thumbs{display:flex;gap:10px;overflow-x:auto;padding:14px 2px 8px;scrollbar-width:thin;scrollbar-color:var(--gold-hair) transparent}
+.th{position:relative;flex:none;width:136px;aspect-ratio:16/9;padding:0;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:var(--abyss);opacity:.55;transition:opacity .25s,border-color .25s,transform .25s}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.th:hover{opacity:.9;transform:translateY(-2px)}
+.th.on{opacity:1;border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.th .tn{position:absolute;bottom:4px;inset-inline-start:4px;background:rgba(3,20,15,.82);color:var(--ink);font-size:.72rem;border-radius:6px;padding:0 6px;line-height:1.7}
+.th .tm{position:absolute;top:4px;inset-inline-end:4px;width:18px;height:18px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.th .tm svg{width:9px;height:9px;fill:var(--forest)}
+@media (max-width:600px){.th{width:104px}.deck-bar{flex-wrap:wrap}.dcount{font-size:1.2rem}}
+.stage:fullscreen{border-radius:0;border:0;background:#000;display:grid;place-items:center;width:100vw;height:100vh;box-shadow:none}
+.stage:fullscreen .frame{width:min(100vw,calc(100vh * 16 / 9))}
+.stage:-webkit-full-screen{border-radius:0;border:0;background:#000;display:grid;place-items:center;width:100vw;height:100vh}
+.stage:-webkit-full-screen .frame{width:min(100vw,calc(100vh * 16 / 9))}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:var(--scrim);display:grid;grid-template-rows:auto 1fr auto;padding:calc(12px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--ink-2);font-size:.9rem}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;gap:12px;padding-block:10px}
+.lb img{max-width:100%;max-height:calc(100% - 64px);object-fit:contain;border-radius:10px;border:1px solid var(--gold-hair);background:#EDEDED}
+.lb figcaption{text-align:center;line-height:1.6}
+.lb figcaption b{color:var(--gold);display:block}
+.lb figcaption span{color:var(--ink-2);font-size:.9rem}
+.lb-nav{display:flex;justify-content:center;gap:12px}
+.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold-hair);background:rgba(255,255,255,.06);color:var(--ink)}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+.icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(16px + env(safe-area-inset-top,0px))}
+</style>
+
+<script>document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");</script>
+<div class="field" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sp" viewBox="0 0 100 100"><path d="M50 0 L59.2 40.8 L100 50 L59.2 59.2 L50 100 L40.8 59.2 L0 50 L40.8 40.8Z"/></symbol>
+  </defs>
+</svg>
+
+<div dir="rtl" lang="ar">
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="930 40 760 820" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="glowG"><stop offset="0" stop-color="#2FA37A" stop-opacity=".38"/><stop offset="1" stop-color="#2FA37A" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="1512" cy="708" r="288" fill="#052219" fill-opacity=".45"/>
+      <g class="slowspin">
+        <circle cx="1296" cy="444" r="318" fill="none" stroke="#E2C88F" stroke-opacity=".55" stroke-width="2"/>
+        <circle cx="1296" cy="126" r="5" fill="#E2C88F" fill-opacity=".8"/>
+      </g>
+      <circle cx="1296" cy="444" r="210" fill="none" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1.6"/>
+      <circle cx="1182" cy="684" r="66" fill="#E2C88F" fill-opacity=".30"/>
+      <use href="#sp" class="tw" x="1215" y="363" width="162" height="162" fill="#E2C88F"/>
+      <use href="#sp" class="tw tw2" x="1421" y="257" width="50" height="50" fill="#E2C88F" fill-opacity=".9"/>
+      <use href="#sp" class="tw tw3" x="1152" y="288" width="36" height="36" fill="#E2C88F" fill-opacity=".85"/>
+      <use href="#sp" class="tw tw4" x="1455" y="639" width="66" height="66" fill="#E2C88F" fill-opacity=".8"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="school"><b>الثانوية الرابعة ببريدة</b><i></i><span>تقرير نشاط توعوي</span></p>
+      <span class="pill">ندوة توعوية</span>
+      <h1><span>الأمن الفكري</span><span>والمواطنة الفكرية</span></h1>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="tagline">وعيٌ يحمي الفكر، وانتماءٌ يبني الوطن</p>
+      <dl class="when">
+        <div><dt>اليوم</dt><dd>الثلاثاء</dd></div>
+        <div><dt>التاريخ</dt><dd>٢٣ جمادى الأولى ١٤٤٨هـ<small>٣ نوفمبر ٢٠٢٦م</small></dd></div>
+        <div><dt>الوقت</dt><dd>٩:٣٠ صباحًا</dd></div>
+        <div><dt>الإشراف</dt><dd>المعلمة ريم اليوسف</dd></div>
+      </dl>
+    </div>
+  </div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="sec" id="overview">
+  <div class="wrap">
+    <div class="stats">
+      <div><b>٤</b><span>محاور<br>للنقاش</span></div>
+      <div><b>٣</b><span>أسئلة<br>حوارية</span></div>
+      <div><b>٥</b><span>مواقف<br>تفاعلية</span></div>
+      <div><b>٢٥</b><span>طالبة في عينة<br>الاستبيان</span></div>
+    </div>
+
+    <div class="ov-grid">
+      <div class="ov-main">
+        <header class="sec-head" style="margin-bottom:0">
+          <p class="kicker">مقدمة التقرير</p>
+          <h2>الندوة في سطور</h2>
+          <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+        </header>
+        <p class="summary">نظّمت طالبات <strong>الثانوية الرابعة ببريدة</strong>، بإشراف المعلمة <strong>ريم اليوسف</strong>، ندوة توعوية بعنوان <strong>«الأمن الفكري والمواطنة الفكرية: وعيٌ يحمي الفكر، وانتماءٌ يبني الوطن»</strong>، تحاورت فيها المشاركات حول دور الفكر الواعي في بناء الإنسان، ومسؤولية المواطنة في المحافظة على أمن الوطن واستقراره. وتضمّنت الندوة أربعة محاور، ودراسة ميدانية باستبيان، وفقرة تفاعلية، بحضور مديرة المدرسة والمعلمات والطالبات وعدد من أولياء الأمور.</p>
+        <figure class="gpanel opening">
+          <svg class="spark" aria-hidden="true"><use href="#sp"/></svg>
+          <figcaption class="who">من افتتاحية مديرة الندوة</figcaption>
+          <blockquote>إن العقول الواعية هي حصون الأوطان، وإن الفكر السليم أساس الأمن والاستقرار</blockquote>
+          <hr>
+          <p>فكما يحتاج الوطن إلى من يحمي حدوده، فإنه يحتاج إلى عقول تحمي قيمه، وتصون وحدته، وتواجه الشائعات بالتثبت، والأفكار المغلوطة بالوعي والمعرفة.</p>
+        </figure>
+      </div>
+
+      <aside class="panel facts" aria-label="بطاقة الندوة">
+        <h3><svg class="spark"><use href="#sp"/></svg>بطاقة الندوة</h3>
+        <dl>
+          <dt>نوع النشاط</dt><dd>ندوة توعوية</dd>
+          <dt>العنوان</dt><dd>الأمن الفكري والمواطنة الفكرية</dd>
+          <dt>المدرسة</dt><dd>الثانوية الرابعة ببريدة</dd>
+          <dt>اليوم والتاريخ</dt><dd>الثلاثاء ٢٣ جمادى الأولى ١٤٤٨هـ<small>الموافق ٣ نوفمبر ٢٠٢٦م</small></dd>
+          <dt>الوقت</dt><dd>الساعة ٩:٣٠ صباحًا</dd>
+          <dt>الفئة المستهدفة</dt><dd>طالبات المدرسة</dd>
+          <dt>الحضور</dt><dd>مديرة المدرسة، والمعلمات، والطالبات، وأولياء الأمور</dd>
+          <dt>الإعداد</dt><dd>سبع طالبات من المدرسة</dd>
+          <dt>الإشراف</dt><dd>المعلمة ريم اليوسف</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="goals">
+      <h3><svg class="spark"><use href="#sp"/></svg>أهداف الندوة</h3>
+      <ul>
+        <li class="card"><svg class="spark"><use href="#sp"/></svg><span>التعريف بمفهومي الأمن الفكري والمواطنة الفكرية وأهميتهما.</span></li>
+        <li class="card"><svg class="spark"><use href="#sp"/></svg><span>التوعية بمخاطر الشائعات والتطرف الفكري وأثرهما في المجتمع.</span></li>
+        <li class="card"><svg class="spark"><use href="#sp"/></svg><span>تنمية مهارات التثبت من الأخبار والتفكير الناقد.</span></li>
+        <li class="card"><svg class="spark"><use href="#sp"/></svg><span>تعزيز دور الطالبة في حماية الأمن الفكري وخدمة وطنها.</span></li>
+        <li class="card"><svg class="spark"><use href="#sp"/></svg><span>قياس وعي الطالبات بالموضوع من خلال استبيان ميداني.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM ================= -->
+<section class="sec" id="program">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">مسار الندوة</p>
+      <h2>برنامج الندوة</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="lede">الفقرات بالترتيب الذي قُدّمت به في الندوة. اضغط على أي محور للانتقال إلى تفاصيله.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="step"><span class="badge">١</span><div><h3><small>الاستهلال</small>افتتاح الندوة بآيات من القرآن الكريم</h3><div class="meta"><span class="tag">عرض مرئي</span></div></div></li>
+      <li class="step"><span class="badge">٢</span><div><h3><small>مديرة الندوة</small>افتتاحية الندوة والترحيب بالحضور</h3><p>كلمة عن العقول الواعية بوصفها حصون الأوطان، والترحيب بضيفات الندوة.</p></div></li>
+      <li class="step"><span class="badge">٣</span><div><h3><small>المحور الأول</small>ما الأمن الفكري؟</h3><p>مفهومه وأهميته في حياة الإنسان، يتبعه سؤال للنقاش.</p><div class="meta"><span class="tag">سؤال للنقاش</span><a class="go" href="#axes" data-axis="1">تفاصيل المحور ←</a></div></div></li>
+      <li class="step"><span class="badge">٤</span><div><h3><small>المحور الثاني</small>ما المواطنة الفكرية؟</h3><p>مفهومها ومظاهرها الست، يتبعه سؤال للنقاش.</p><div class="meta"><span class="tag">سؤال للنقاش</span><a class="go" href="#axes" data-axis="2">تفاصيل المحور ←</a></div></div></li>
+      <li class="interlude"><span class="gem"></span><span>عرض مرئي وطني</span></li>
+      <li class="step"><span class="badge">٥</span><div><h3><small>المحور الثالث</small>الشائعات والتطرف الفكري وأثرهما في المجتمع</h3><p>أبرز المخاطر الفكرية، والتثبت منهجٌ قرآني، يتبعه سؤال للنقاش.</p><div class="meta"><span class="tag">سؤال للنقاش</span><a class="go" href="#axes" data-axis="3">تفاصيل المحور ←</a></div></div></li>
+      <li class="interlude"><span class="gem"></span><span>عرض مرئي وطني</span></li>
+      <li class="step"><span class="badge">٦</span><div><h3><small>المحور الرابع</small>كيف تكون الطالبة حارسةً للأمن الفكري؟</h3><p>ست ممارسات تسهم بها الطالبة، والأمن الفكري مسؤولية مشتركة.</p><div class="meta"><a class="go" href="#axes" data-axis="4">تفاصيل المحور ←</a></div></div></li>
+      <li class="step"><span class="badge">٧</span><div><h3><small>دراسة ميدانية</small>استبيان الوعي ونتائجه</h3><p>عرض نتائج استبيان طُبّق على ٢٥ طالبة من طالبات المدرسة.</p><div class="meta"><a class="go" href="#survey">النتائج ←</a></div></div></li>
+      <li class="step"><span class="badge">٨</span><div><h3><small>فقرة تفاعلية</small>ماذا لو كنتِ مكانها؟</h3><p>خمسة مواقف من الحياة اليومية تجيب عنها الطالبات.</p><div class="meta"><a class="go" href="#whatif">المواقف ←</a></div></div></li>
+      <li class="interlude"><span class="gem"></span><span>عرض مرئي وطني</span></li>
+      <li class="step"><span class="badge">٩</span><div><h3><small>الختام</small>ختام الندوة والدعاء للوطن</h3><div class="meta"><a class="go" href="#closing">كلمة الختام ←</a></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= PRESENTATION ================= -->
+<section class="sec" id="deck">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">عرض الندوة</p>
+      <h2>العرض التقديمي</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="lede">تصفّح شرائح العرض الذي قُدّم في الندوة (٢٤ شريحة)، وشغّل المقاطع المرئية والتسجيل الصوتي من داخل الشرائح.</p>
+    </header>
+    <div class="viewer">
+      <div class="stage" id="stage" tabindex="0" role="region" aria-roledescription="عرض شرائح" aria-label="شرائح العرض التقديمي، استخدم الأسهم للتنقل">
+        <div class="frame" id="frame">
+          <img class="slide cur" id="slA" src="deck/s01.jpg" alt="الشريحة ١: الغلاف" width="1600" height="900">
+          <img class="slide" id="slB" alt="" aria-hidden="true" width="1600" height="900">
+          <div class="media" id="media"></div>
+        </div>
+        <button class="side prev" id="dPrev" type="button" aria-label="الشريحة السابقة"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+        <button class="side next" id="dNext" type="button" aria-label="الشريحة التالية"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+      </div>
+      <div class="deck-bar">
+        <p class="deck-meta"><span class="dcount num" id="dCount">١ / ٢٤</span><span class="dtitle" id="dTitle">الغلاف: الأمن الفكري والمواطنة الفكرية</span></p>
+        <div class="deck-ctrls">
+          <button class="icon-btn" id="dPrev2" type="button" aria-label="الشريحة السابقة"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <button class="icon-btn" id="dNext2" type="button" aria-label="الشريحة التالية"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="icon-btn" id="dFull" type="button" aria-label="ملء الشاشة"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        </div>
+      </div>
+      <div class="dprog" aria-hidden="true"><i id="dProg"></i></div>
+      <div class="thumbs" id="thumbs" aria-label="مصغرات الشرائح"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AXES ================= -->
+<section class="sec" id="axes">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">مضمون الندوة</p>
+      <h2>محاور الندوة</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="lede">اختر محورًا لعرض ما طُرح فيه، واضغط «الإجابة المتوقعة» تحت كل سؤال نقاش.</p>
+    </header>
+
+    <div class="tablist" role="tablist" aria-label="محاور الندوة">
+      <button class="tab" role="tab" id="tab-1" aria-controls="axis-1" aria-selected="true"><span class="badge">١</span><span><small>المحور الأول</small><b>ما الأمن الفكري؟</b></span></button>
+      <button class="tab" role="tab" id="tab-2" aria-controls="axis-2" aria-selected="false" tabindex="-1"><span class="badge">٢</span><span><small>المحور الثاني</small><b>ما المواطنة الفكرية؟</b></span></button>
+      <button class="tab" role="tab" id="tab-3" aria-controls="axis-3" aria-selected="false" tabindex="-1"><span class="badge">٣</span><span><small>المحور الثالث</small><b>الشائعات والتطرف الفكري</b></span></button>
+      <button class="tab" role="tab" id="tab-4" aria-controls="axis-4" aria-selected="false" tabindex="-1"><span class="badge">٤</span><span><small>المحور الرابع</small><b>الطالبة حارسةً للأمن الفكري</b></span></button>
+    </div>
+
+    <!-- Axis 1 -->
+    <article class="panel axis" role="tabpanel" id="axis-1" aria-labelledby="tab-1">
+      <div class="axis-grid">
+        <div class="axis-main">
+          <h3 class="axis-title"><small>المحور الأول</small>ما الأمن الفكري؟</h3>
+          <div class="concept"><span class="chip">المفهوم</span>الأمن الفكري هو سلامة فكر الإنسان ووعيه، وقدرته على التمييز بين الأفكار الصحيحة والخاطئة، مع التمسك بالقيم والمبادئ، ورفض التعصب والتطرف، والابتعاد عن كل ما يهدد أمن المجتمع واستقراره.</div>
+          <h4 class="sub"><svg class="spark"><use href="#sp"/></svg>تكمن أهميته في أنه يساعد الإنسان على:</h4>
+          <ul class="ticks">
+            <li><svg class="spark"><use href="#sp"/></svg><span>التمييز بين الحقيقة والشائعة.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>احترام الآخرين رغم اختلاف الآراء.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>رفض التعصب والكراهية.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>اتخاذ القرارات بناءً على المعرفة والأدلة.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>حماية نفسه من الاستغلال الفكري والتضليل الإعلامي.</span></li>
+          </ul>
+        </div>
+        <div class="axis-side">
+          <p class="example"><b>مثال طُرح في الندوة</b>لو اختلفت طالبتان حول موضوع ما، فوصفت إحداهما الأخرى بالجهل لأنها لا توافقها الرأي، فهي لا تحمل فكرًا واعيًا؛ لأن الفكر الواعي يناقش الأفكار ولا يحكم على الأشخاص لمجرد اختلافهم.</p>
+          <p class="example"><b>من واقعنا</b>تأتي المعلومات والأخبار اليوم من كل اتجاه؛ فبمجرد فتح الهاتف نجد أخبارًا وتعليقات وآراء، بعضها صحيح، وبعضها مجتزأ أو مضلل أو غير دقيق.</p>
+          <div class="question">
+            <div class="qhead"><span class="qmark">؟</span>سؤال للنقاش</div>
+            <p class="qtext">هل يمكن أن يكون الإنسان متعلمًا، ومع ذلك يقع ضحية للشائعات؟ ولماذا؟</p>
+            <button class="reveal" data-reveal aria-expanded="false" aria-controls="ans-1"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">الإجابة المتوقعة</span></button>
+            <div class="answer" id="ans-1" hidden><b>الإجابة المتوقعة</b>نعم؛ لأن التعليم وحده لا يكفي ما لم يصاحبه تفكير ناقد، وتثبت من المعلومات، وقدرة على التمييز بين المصادر الموثوقة وغير الموثوقة.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Axis 2 -->
+    <article class="panel axis" role="tabpanel" id="axis-2" aria-labelledby="tab-2" hidden>
+      <div class="axis-grid">
+        <div class="axis-main">
+          <h3 class="axis-title"><small>المحور الثاني</small>ما المواطنة الفكرية؟</h3>
+          <div class="concept"><span class="chip">المفهوم</span>المواطنة الفكرية هي ممارسة المواطنة بوعي ومسؤولية، من خلال الاعتزاز بالهوية الوطنية، واحترام الأنظمة والقيم المشتركة، والمشاركة الإيجابية في المجتمع، والتعبير عن الرأي بمسؤولية، واحترام حقوق الآخرين.</div>
+          <div class="callout"><svg class="spark"><use href="#sp"/></svg><span>وهي لا تعني أن تتشابه جميع الأفكار والآراء، بل تعني أن يكون الاختلاف قائمًا على الاحترام والحوار، بعيدًا عن الإساءة والتحريض والتعصب.</span></div>
+          <h4 class="sub"><svg class="spark"><use href="#sp"/></svg>مظاهر المواطنة الفكرية</h4>
+          <ul class="signs">
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>الاعتزاز بالوطن والمحافظة على مكتسباته</li>
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>احترام التنوع والاختلاف في الآراء</li>
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>التحقق من الأخبار قبل نشرها</li>
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>المحافظة على الوحدة الوطنية</li>
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>المشاركة الإيجابية في المبادرات المجتمعية</li>
+            <li class="card"><svg class="spark"><use href="#sp"/></svg>استخدام وسائل التواصل الاجتماعي بمسؤولية</li>
+          </ul>
+        </div>
+        <div class="axis-side">
+          <p class="example"><b>مثال طُرح في الندوة</b>في عصرنا الحالي تستطيع رسالة واحدة أن تصل إلى مئات الأشخاص خلال دقائق؛ لذلك فمن الوعي ألّا ننشر كل ما يصل إلينا، وألّا نعيد نشر محتوى قد يسيء إلى الآخرين.</p>
+          <div class="question">
+            <div class="qhead"><span class="qmark">؟</span>سؤال للنقاش</div>
+            <p class="qtext">كيف تعبّر الطالبة عن حبها لوطنها من خلال أفكارها وسلوكها الرقمي؟</p>
+            <button class="reveal" data-reveal aria-expanded="false" aria-controls="ans-2"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">الإجابة المتوقعة</span></button>
+            <div class="answer" id="ans-2" hidden><b>الإجابة المتوقعة</b>بنشر المحتوى النافع، والتحقق من الأخبار، واحترام الآخرين، وعدم الإساءة إلى الوطن أو أفراده، والإبلاغ عن المحتوى الضار عبر القنوات المناسبة.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Axis 3 -->
+    <article class="panel axis" role="tabpanel" id="axis-3" aria-labelledby="tab-3" hidden>
+      <div class="axis-grid">
+        <div class="axis-main">
+          <h3 class="axis-title"><small>المحور الثالث</small>الشائعات والتطرف الفكري وأثرهما في المجتمع</h3>
+          <p style="color:var(--ink-2)">أصبحت وسائل التواصل الاجتماعي من أهم وسائل تبادل المعلومات، ولكنها قد تتحول إلى وسيلة لنشر الشائعات والأفكار المضللة إذا غاب الوعي والمسؤولية.</p>
+          <h4 class="sub"><svg class="spark"><use href="#sp"/></svg>من أبرز المخاطر الفكرية</h4>
+          <ol class="risks">
+            <li class="card"><span class="badge">١</span>نشر الأخبار دون التأكد من صحتها</li>
+            <li class="card"><span class="badge">٢</span>الانسياق خلف الحسابات المجهولة</li>
+            <li class="card"><span class="badge">٣</span>التعصب للرأي ورفض الحوار</li>
+            <li class="card"><span class="badge">٤</span>تداول المحتوى الذي يحرّض على الكراهية أو العنف</li>
+            <li class="card"><span class="badge">٥</span>تصديق المعلومات لمجرد كثرة تداولها</li>
+          </ol>
+          <div class="callout"><svg class="spark"><use href="#sp"/></svg><span>الشائعة تبدأ بكلمة، وقد يبدأ التعصب بفكرة لم نراجعها، ويبدأ الوعي بسؤال بسيط: ما الدليل؟ وما الإثبات؟</span></div>
+        </div>
+        <div class="axis-side">
+          <div class="gpanel verse">
+            <p class="lead">التثبت منهجٌ قرآني، قال تعالى:</p>
+            <q>﴿يَا أَيُّهَا الَّذِينَ آمَنُوا إِنْ جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا﴾</q>
+            <cite>[الحجرات: ٦]</cite>
+            <p class="lesson">وتعلّمنا هذه الآية أهمية التحقق من الأخبار قبل بناء الأحكام عليها أو نقلها إلى الآخرين.</p>
+          </div>
+          <div class="question">
+            <div class="qhead"><span class="qmark">؟</span>سؤال للنقاش</div>
+            <p class="qtext">إذا وصلتكِ رسالة تتضمن خبرًا خطيرًا عن مدرستكِ أو وطنكِ، فهل تنشرينها لتحذير الآخرين أم تتثبتين أولًا؟</p>
+            <button class="reveal" data-reveal aria-expanded="false" aria-controls="ans-3"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">الإجابة المتوقعة</span></button>
+            <div class="answer" id="ans-3" hidden><b>الإجابة المتوقعة</b>أتثبت من مصدر الخبر، وأبحث عن تأكيده من المصادر الرسمية الموثوقة، ولا أعيد نشره ما لم أتحقق من صحته.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Axis 4 -->
+    <article class="panel axis" role="tabpanel" id="axis-4" aria-labelledby="tab-4" hidden>
+      <div class="axis-grid">
+        <div class="axis-main">
+          <h3 class="axis-title"><small>المحور الرابع</small>كيف تكون الطالبة حارسةً للأمن الفكري؟</h3>
+          <h4 class="sub"><svg class="spark"><use href="#sp"/></svg>تستطيع الطالبة الإسهام في تعزيز الأمن الفكري من خلال:</h4>
+          <ul class="practices">
+            <li class="card"><span class="chip">التثبت</span>التأكد من صحة المعلومات قبل نشرها.</li>
+            <li class="card"><span class="chip">التفكير الناقد</span>تحليل الأفكار وعدم قبولها لمجرد انتشارها.</li>
+            <li class="card"><span class="chip">الحوار</span>الاستماع إلى الآراء المختلفة ومناقشتها باحترام.</li>
+            <li class="card"><span class="chip">الوعي الرقمي</span>حماية الخصوصية وتجنب الحسابات والمصادر المشبوهة.</li>
+            <li class="card"><span class="chip">الانتماء الوطني</span>المشاركة في الأعمال النافعة وخدمة المجتمع.</li>
+            <li class="card"><span class="chip">المسؤولية</span>عدم المشاركة في نشر الكراهية أو التحريض أو المعلومات المضللة.</li>
+          </ul>
+          <p class="example"><b>مثال طُرح في الندوة</b>كثيرًا ما نشاهد مقطعًا مؤثرًا أو نقرأ تغريدة أو منشورًا بأسلوب مقنع، فنشعر أن ما ورد فيه صحيح لأنه أثار مشاعرنا؛ لذا يجب أن نتوقف ونفكر ونميّز بين الرأي والحقيقة.</p>
+        </div>
+        <div class="axis-side">
+          <h4 class="sub"><svg class="spark"><use href="#sp"/></svg>مسؤولية مشتركة</h4>
+          <p style="color:var(--ink-2);margin-top:-10px">مسؤولية الأمن الفكري لا تقتصر على المؤسسات، بل تبدأ من الفرد، ومن الأسرة، والمدرسة، وتمتد إلى المجتمع بأكمله.</p>
+          <svg class="rings" viewBox="0 0 320 320" role="img" aria-label="دوائر المسؤولية: الفرد في المركز، ثم الأسرة، ثم المدرسة، ثم المجتمع">
+            <circle cx="160" cy="160" r="150" fill="rgba(255,255,255,.03)" stroke="#E2C88F" stroke-opacity=".35"/>
+            <circle cx="160" cy="160" r="112" fill="rgba(255,255,255,.04)" stroke="#E2C88F" stroke-opacity=".45"/>
+            <circle cx="160" cy="160" r="76" fill="rgba(255,255,255,.05)" stroke="#E2C88F" stroke-opacity=".6"/>
+            <circle cx="160" cy="160" r="40" fill="#E2C88F"/>
+            <text x="160" y="167" text-anchor="middle" fill="#0A3A2B" font-size="19">الفرد</text>
+            <text x="160" y="104" text-anchor="middle" fill="#FFFFFF" font-size="15">الأسرة</text>
+            <text x="160" y="68" text-anchor="middle" fill="#FFFFFF" font-size="15">المدرسة</text>
+            <text x="160" y="31" text-anchor="middle" fill="#E2C88F" font-size="15">المجتمع</text>
+          </svg>
+          <div class="callout"><svg class="spark"><use href="#sp"/></svg><span>المواطنة الواعية ليست كلمات تقال، بل سلوك يظهر في المواقف اليومية، والأمن الفكري ليس مسؤولية جهة واحدة، بل مسؤولية مشتركة.</span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= SURVEY ================= -->
+<section class="sec" id="survey">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">دراسة ميدانية</p>
+      <h2>استبيان الوعي ونتائجه</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+    </header>
+
+    <div class="sv-grid">
+      <aside class="panel sv-card">
+        <div><p class="lbl">عنوان الاستبيان</p><p class="t">مستوى الوعي بالمواطنة الفكرية والأمن الفكري لدى الطالبات</p></div>
+        <div>
+          <p class="lbl">أهدافه</p>
+          <ul class="ticks" style="margin-top:6px">
+            <li><svg class="spark"><use href="#sp"/></svg><span>قياس فهم مصطلح المواطنة الفكرية.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>معرفة الوعي بكيفية التحقق من المعلومات.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>قياس الوعي بمخاطر الشائعات.</span></li>
+            <li><svg class="spark"><use href="#sp"/></svg><span>تحديد احتياجات التوعية.</span></li>
+          </ul>
+        </div>
+        <div class="sv-pair">
+          <div><small>الفئة المستهدفة</small><b>طالبات المدرسة</b></div>
+          <div><small>حجم العينة</small><b>٢٥ طالبة</b></div>
+        </div>
+      </aside>
+
+      <div class="panel chart">
+        <div class="chart-head">
+          <h3>نتائج الاستبيان</h3>
+          <div class="legend" aria-hidden="true"><span><i class="f"></i>طالبة أظهرت الوعي</span><span><i class="e"></i>بقية العينة</span></div>
+        </div>
+        <p style="color:var(--ink-3);font-size:.88rem;margin-bottom:6px">كل دائرة تمثّل طالبة واحدة من العينة (٢٥ طالبة).</p>
+        <div class="metrics" id="metrics">
+          <div class="metric" tabindex="0" data-n="20" aria-label="احترام الآراء المختلفة: ٨٠٪، ٢٠ من ٢٥ طالبة"><div class="m-head"><span class="m-label">احترام الآراء المختلفة</span><span class="m-val num">٨٠٪</span></div><div class="dots" aria-hidden="true"></div><p class="m-foot"><b>٢٠</b> من ٢٥ طالبة</p></div>
+          <div class="metric" tabindex="0" data-n="17" aria-label="التحقق من الأخبار: ٦٨٪، ١٧ من ٢٥ طالبة"><div class="m-head"><span class="m-label">التحقق من الأخبار</span><span class="m-val num">٦٨٪</span></div><div class="dots" aria-hidden="true"></div><p class="m-foot"><b>١٧</b> من ٢٥ طالبة</p></div>
+          <div class="metric" tabindex="0" data-n="14" aria-label="التمييز بين الشائعات والمعلومات: ٥٦٪، ١٤ من ٢٥ طالبة"><div class="m-head"><span class="m-label">التمييز بين الشائعات والمعلومات</span><span class="m-val num">٥٦٪</span></div><div class="dots" aria-hidden="true"></div><p class="m-foot"><b>١٤</b> من ٢٥ طالبة</p></div>
+          <div class="metric" tabindex="0" data-n="12" aria-label="معرفة مفهوم المواطنة الفكرية: ٤٨٪، ١٢ من ٢٥ طالبة"><div class="m-head"><span class="m-label">معرفة مفهوم المواطنة الفكرية</span><span class="m-val num">٤٨٪</span></div><div class="dots" aria-hidden="true"></div><p class="m-foot"><b>١٢</b> من ٢٥ طالبة، أقل من نصف العينة</p></div>
+        </div>
+        <div class="insight"><svg class="spark"><use href="#sp"/></svg><span>أظهر تحليل النتائج ارتفاع احترام الآراء المختلفة، مع الحاجة إلى تعزيز الوعي بالمواطنة الفكرية والتحقق من المعلومات.</span></div>
+      </div>
+    </div>
+
+    <div class="recs">
+      <h3><svg class="spark"><use href="#sp"/></svg>توصيات في ضوء النتائج</h3>
+      <ul>
+        <li class="card"><span class="chip num">٤٨٪</span>تعزيز التعريف بمفهوم المواطنة الفكرية لدى الطالبات، فهو أدنى المؤشرات في الاستبيان.</li>
+        <li class="card"><span class="chip num">٥٦٪</span>تدريب الطالبات على التمييز بين الشائعة والمعلومة بأمثلة واقعية من وسائل التواصل.</li>
+        <li class="card"><span class="chip num">٦٨٪</span>ترسيخ عادة التحقق من الأخبار من مصادرها الرسمية قبل نشرها أو تداولها.</li>
+        <li class="card"><span class="chip num">٨٠٪</span>البناء على ارتفاع احترام الآراء المختلفة بإتاحة مساحات للحوار الهادئ داخل المدرسة.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT IF ================= -->
+<section class="sec" id="whatif">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">فقرة تفاعلية</p>
+      <h2>ماذا لو كنتِ مكانها؟</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="lede">جرّب الفقرة كما قُدّمت: اقرأ الموقف، وفكّر دقيقة، ثم اعرض التصرف المقترح.</p>
+    </header>
+
+    <ol class="method" aria-label="طريقة تقديم الفقرة">
+      <li><b>١</b>تقرأ مديرة الندوة الموقف</li>
+      <li><b>٢</b>دقيقة للتفكير</li>
+      <li><b>٣</b>مشاركات عشوائية من الطالبات</li>
+      <li><b>٤</b>عرض التصرف المقترح</li>
+    </ol>
+
+    <div class="wi-bar">
+      <div class="progress"><span class="pips" id="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="wiCount">عُرض ٠ من ٥ تصرفات</span></div>
+      <button class="ghost" id="wiAll" type="button">عرض جميع التصرفات</button>
+    </div>
+
+    <div class="wi-grid" id="wiGrid">
+      <article class="wi"><span class="chip">الموقف ١</span><p class="sit">وصلتكِ رسالة تتضمن خبرًا عن قرار جديد في المدرسة، دون مصدر موثوق.</p><p class="ask">ماذا تفعلين؟</p>
+        <div class="acts"><button class="reveal" data-reveal data-wi aria-expanded="false" aria-controls="wa-1"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">التصرف المقترح</span></button><button class="timer" type="button"><i class="ring"></i><span>دقيقة للتفكير</span></button></div>
+        <div class="answer" id="wa-1" hidden><b>التصرف المقترح</b>أتحقق من إدارة المدرسة أو من مصدر رسمي قبل نشر الخبر.</div></article>
+      <article class="wi"><span class="chip">الموقف ٢</span><p class="sit">نشرت طالبة رأيًا يخالف رأيكِ.</p><p class="ask">كيف تتصرفين؟</p>
+        <div class="acts"><button class="reveal" data-reveal data-wi aria-expanded="false" aria-controls="wa-2"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">التصرف المقترح</span></button><button class="timer" type="button"><i class="ring"></i><span>دقيقة للتفكير</span></button></div>
+        <div class="answer" id="wa-2" hidden><b>التصرف المقترح</b>أناقشها باحترام، وأقدّم حججي دون إساءة.</div></article>
+      <article class="wi"><span class="chip">الموقف ٣</span><p class="sit">شاهدتِ مقطعًا مجتزأً يسيء إلى شخص أو جهة.</p><p class="ask">هل تعيدين نشره؟</p>
+        <div class="acts"><button class="reveal" data-reveal data-wi aria-expanded="false" aria-controls="wa-3"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">التصرف المقترح</span></button><button class="timer" type="button"><i class="ring"></i><span>دقيقة للتفكير</span></button></div>
+        <div class="answer" id="wa-3" hidden><b>التصرف المقترح</b>لا أنشره قبل التحقق من سياقه وصحته.</div></article>
+      <article class="wi"><span class="chip">الموقف ٤</span><p class="sit">طلبت منكِ صديقة إعادة نشر خبر وطني غير مؤكد.</p><p class="ask">ماذا تقولين لها؟</p>
+        <div class="acts"><button class="reveal" data-reveal data-wi aria-expanded="false" aria-controls="wa-4"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">التصرف المقترح</span></button><button class="timer" type="button"><i class="ring"></i><span>دقيقة للتفكير</span></button></div>
+        <div class="answer" id="wa-4" hidden><b>التصرف المقترح</b>أخبرها بأهمية التثبت، وأن إعادة النشر قد تسهم في انتشار الشائعة.</div></article>
+      <article class="wi"><span class="chip">الموقف ٥</span><p class="sit">شاهدتِ محتوى يحرّض على الكراهية والعنف.</p><p class="ask">ما التصرف المناسب؟</p>
+        <div class="acts"><button class="reveal" data-reveal data-wi aria-expanded="false" aria-controls="wa-5"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">التصرف المقترح</span></button><button class="timer" type="button"><i class="ring"></i><span>دقيقة للتفكير</span></button></div>
+        <div class="answer" id="wa-5" hidden><b>التصرف المقترح</b>لا أشارك في نشره، وأستخدم أدوات الإبلاغ المناسبة عند الحاجة.</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING ================= -->
+<section class="sec" id="closing">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">ختام الندوة</p>
+      <h2>رسالة الختام</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+    </header>
+    <div class="panel close-panel">
+      <p class="statement">أمن الأوطان لا يتحقق بالقوة وحدها، بل يتحقق أيضًا <em>بالعقول الواعية، والأفكار المعتدلة، والأخلاق الرفيعة</em>، والمسؤولية في القول والعمل.</p>
+      <p class="more">إن الأمن الفكري يبدأ بفكرة واعية، والمواطنة الفكرية تظهر في سلوك مسؤول، والوطن يزدهر بأبنائه وبناته الذين يجمعون بين العلم والوعي والانتماء.</p>
+    </div>
+    <p class="lead-in">فلنجعل من…</p>
+    <ul class="vows">
+      <li>التثبت منهجًا</li>
+      <li>الحوار أسلوبًا</li>
+      <li>الاحترام قيمة</li>
+      <li>خدمة الوطن رسالة</li>
+    </ul>
+
+    <div class="prayer">
+      <svg class="halo" viewBox="0 0 560 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <circle cx="280" cy="160" r="150" fill="none" stroke="#E2C88F" stroke-opacity=".35" stroke-width="1.4"/>
+        <circle cx="280" cy="160" r="104" fill="none" stroke="#FFFFFF" stroke-opacity=".12"/>
+        <use href="#sp" class="tw" x="78" y="70" width="38" height="38" fill="#E2C88F"/>
+        <use href="#sp" class="tw tw3" x="460" y="208" width="30" height="30" fill="#E2C88F" fill-opacity=".85"/>
+        <use href="#sp" class="tw tw2" x="430" y="52" width="16" height="16" fill="#FFFFFF" fill-opacity=".8"/>
+      </svg>
+      <h2>حفظ الله وطننا</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span><i style="background:linear-gradient(to right,var(--ink),rgba(255,255,255,.2))"></i></div>
+      <p>وأدام عليه نعمة الأمن والاستقرار، ووفّقنا لنكون لبنات خير وبناء في مجتمعه</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">من يوم الندوة</p>
+      <h2>توثيق الندوة</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+      <p class="lede">اضغط على أي صورة لعرضها بالحجم الكامل.</p>
+    </header>
+    <div class="gallery">
+      <button class="shot inv" type="button" data-i="0"><img src="img/invitation.jpg" alt="بطاقة دعوة الندوة: المواطنة الفكرية والأمن الفكري، يوم الثلاثاء الساعة ٩:٣٠" loading="lazy"><span class="cap"><b>بطاقة الدعوة</b><span>«ندعوكم بكل الحب لحضور عرضنا» يوم الثلاثاء الساعة ٩:٣٠</span></span></button>
+      <button class="shot rec" type="button" data-i="1"><img src="img/reception.jpg" alt="ركن الاستقبال: القهوة والتمر والماء والورد الأبيض، وشاشة العرض الافتتاحية" loading="lazy"><span class="cap"><b>ركن الاستقبال والضيافة</b><span>القهوة والتمر والورد الأبيض بانتظار الضيفات</span></span></button>
+      <button class="shot hall" type="button" data-i="2"><img src="img/hall.jpg" alt="الشريحة الافتتاحية للندوة معروضة على السبورة في قاعة الندوة" loading="lazy"><span class="cap"><b>قاعة الندوة</b><span>الشريحة الافتتاحية على شاشة العرض</span></span></button>
+      <button class="shot att" type="button" data-i="3"><img src="img/attendance.jpg" alt="كشف حضور أولياء الأمور بأسمائهن وتوقيعاتهن" loading="lazy"><span class="cap"><b>توثيق حضور أولياء الأمور</b><span>كشف الحضور بالأسماء والتوقيعات</span></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="sec" id="team">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">شكر وتقدير</p>
+      <h2>فريق العمل والحضور</h2>
+      <div class="rule" aria-hidden="true"><i></i><span class="stars"><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg><svg class="spark"><use href="#sp"/></svg></span></div>
+    </header>
+    <div class="team">
+      <div class="panel">
+        <h3><svg class="spark"><use href="#sp"/></svg>إعداد الطالبات</h3>
+        <ul class="names">
+          <li>تالين الفريحي</li>
+          <li>ضحى الضحيان</li>
+          <li>لانا الفلاحي</li>
+          <li>لجين الصقعبي</li>
+          <li>لتين العودة</li>
+          <li>دينا المطوع</li>
+          <li>دنا السعوي</li>
+        </ul>
+        <div class="mentor"><small>إشراف المعلمة</small><b>ريم اليوسف</b></div>
+      </div>
+      <div class="panel parents">
+        <h3><svg class="spark"><use href="#sp"/></svg>حضور أولياء الأمور</h3>
+        <ul>
+          <li>حصة السعوي<span>موقّع</span></li>
+          <li>منيرة المطوع<span>موقّع</span></li>
+          <li>مها الحبيب<span>موقّع</span></li>
+          <li>نورة السعوي<span>موقّع</span></li>
+        </ul>
+        <button class="ghost" type="button" data-i="3">عرض كشف الحضور</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>تقرير ندوة <b>«الأمن الفكري والمواطنة الفكرية»</b></span>
+    <span>الثانوية الرابعة ببريدة · الثلاثاء ٢٣ جمادى الأولى ١٤٤٨هـ</span>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصورة" hidden>
+  <div class="lb-top"><span id="lbCount" class="num"></span><button class="icon-btn" id="lbClose" type="button" aria-label="إغلاق"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <figure><img id="lbImg" alt=""><figcaption><b id="lbTitle"></b><span id="lbText"></span></figcaption></figure>
+  <div class="lb-nav"><button class="icon-btn" id="lbPrev" type="button" aria-label="السابقة"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button><button class="icon-btn" id="lbNext" type="button" aria-label="التالية"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var AR='٠١٢٣٤٥٦٧٨٩';
+  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function ar(n){return String(n).replace(/\d/g,function(d){return AR[d];});}
+  function $(s,r){return (r||document).querySelector(s);}
+  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+
+  /* ---- axis tabs ---- */
+  var tabs=$$('[role="tab"]');
+  function selectTab(id,focus){
+    tabs.forEach(function(t){
+      var on=t.id===id;
+      t.setAttribute('aria-selected',on?'true':'false');
+      t.tabIndex=on?0:-1;
+      var panel=document.getElementById(t.getAttribute('aria-controls'));
+      panel.hidden=!on;
+      if(on)panel.classList.add('in');
+      if(on&&focus)t.focus();
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t.id);});
+    t.addEventListener('keydown',function(e){
+      var j=null,n=tabs.length;
+      if(e.key==='ArrowLeft')j=(i+1)%n;
+      else if(e.key==='ArrowRight')j=(i-1+n)%n;
+      else if(e.key==='Home')j=0;
+      else if(e.key==='End')j=n-1;
+      if(j!==null){e.preventDefault();selectTab(tabs[j].id,true);}
+    });
+  });
+  $$('[data-axis]').forEach(function(a){
+    a.addEventListener('click',function(){selectTab('tab-'+a.getAttribute('data-axis'));});
+  });
+
+  /* ---- reveal answers ---- */
+  var wiBtns=$$('[data-wi]');
+  function updateCount(){
+    var c=wiBtns.filter(function(b){return b.getAttribute('aria-expanded')==='true';}).length;
+    $('#wiCount').textContent='عُرض '+ar(c)+' من ٥ تصرفات';
+    $$('#pips i').forEach(function(p,k){p.classList.toggle('on',k<c);});
+    $('#wiAll').textContent=c===wiBtns.length?'إخفاء جميع التصرفات':'عرض جميع التصرفات';
+  }
+  function setOpen(btn,open){
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    document.getElementById(btn.getAttribute('aria-controls')).hidden=!open;
+    var card=btn.closest('.wi'); if(card)card.classList.toggle('done',open);
+  }
+  $$('[data-reveal]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var card=btn.closest('.wi'); if(card)stopTimer(card);
+      setOpen(btn,btn.getAttribute('aria-expanded')!=='true');
+      if(btn.hasAttribute('data-wi'))updateCount();
+    });
+  });
+  $('#wiAll').addEventListener('click',function(){
+    var allOpen=wiBtns.every(function(b){return b.getAttribute('aria-expanded')==='true';});
+    wiBtns.forEach(function(b){var card=b.closest('.wi');stopTimer(card);setOpen(b,!allOpen);});
+    updateCount();
+  });
+
+  /* ---- one-minute thinking timer ---- */
+  var timers=new Map();
+  function stopTimer(card){
+    var t=timers.get(card); if(!t)return;
+    clearInterval(t.id); timers.delete(card);
+    var b=$('.timer',card); b.classList.remove('run'); $('.ring',b).style.setProperty('--p',0); $('span',b).textContent='دقيقة للتفكير';
+  }
+  $$('.wi .timer').forEach(function(b){
+    b.addEventListener('click',function(){
+      var card=b.closest('.wi');
+      if(timers.has(card)){stopTimer(card);return;}
+      var total=60,left=total,ring=$('.ring',b),lbl=$('span',b);
+      b.classList.add('run'); lbl.textContent=ar(left)+' ثانية'; ring.style.setProperty('--p',0);
+      var id=setInterval(function(){
+        left--; ring.style.setProperty('--p',((total-left)/total*100).toFixed(1)); lbl.textContent=ar(left)+' ثانية';
+        if(left<=0){stopTimer(card);var rb=$('[data-wi]',card);setOpen(rb,true);updateCount();}
+      },1000);
+      timers.set(card,{id:id});
+    });
+  });
+
+  /* ---- survey unit chart ---- */
+  $$('.metric').forEach(function(m){
+    var n=+m.getAttribute('data-n'),d=$('.dots',m),h='';
+    for(var k=0;k<25;k++)h+='<i'+(k<n?' class="on" style="--k:'+k+'"':'')+'></i>';
+    d.innerHTML=h;
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){$$('.dots',e.target).forEach(function(d){d.classList.add('play');});$$('.m-val',e.target).forEach(countUp);io.unobserve(e.target);}});
+    },{threshold:.35});
+    var mm=$('#metrics'); if(mm)io.observe(mm);
+  }
+
+  /* ---- entrance transitions ---- */
+  function countUp(el){
+    if(reduce)return;
+    var txt=el.textContent,m=txt.match(/[٠-٩]+/);if(!m)return;
+    var target=+m[0].replace(/[٠-٩]/g,function(d){return AR.indexOf(d);}),start=null,D=1400;
+    function f(now){
+      if(start===null)start=now;
+      var p=Math.min(1,(now-start)/D);p=1-Math.pow(1-p,3);
+      el.textContent=txt.replace(m[0],ar(Math.round(target*p)));
+      if(p<1)requestAnimationFrame(f);
+    }
+    requestAnimationFrame(f);
+  }
+  if(!reduce&&'IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    ['.sec-head','.stats > div','.summary','.opening','.facts','.goals h3','.goals li','.timeline > li','.viewer','.tablist .tab','.axis','.sv-card','.chart','.recs h3','.recs li','.method li','.wi-bar','.wi','.close-panel','.lead-in','.vows li','.prayer','.gallery .shot','.team .panel']
+      .forEach(function(sel){$$(sel).forEach(function(el){el.classList.add('rv');});});
+    var rio=new IntersectionObserver(function(es){
+      var k=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var el=e.target;
+        el.style.setProperty('--d',Math.min(k++,6));
+        el.classList.add('in');
+        if(el.matches('.stats > div'))countUp($('b',el));
+        rio.unobserve(el);
+      });
+    },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    $$('.rv').forEach(function(el){rio.observe(el);});
+    window.addEventListener('beforeprint',function(){$$('.rv').forEach(function(el){el.classList.add('in');});});
+  }
+
+  /* ---- presentation viewer ---- */
+  var SLIDES=[
+    {t:'الغلاف: الأمن الفكري والمواطنة الفكرية',audio:{src:'media/a01.mp3',r:[4.63,5.38,4,7.11]}},
+    {t:'عرض مرئي افتتاحي',video:{src:'media/v02.mp4',r:[26.68,0.75,46.65,99.25]}},
+    {t:'افتتاحية الندوة'},
+    {t:'محاور الندوة'},
+    {t:'المحور الأول: ما الأمن الفكري؟'},
+    {t:'المحور الأول: سؤال للنقاش'},
+    {t:'المحور الثاني: ما المواطنة الفكرية؟'},
+    {t:'المحور الثاني: مظاهر المواطنة الفكرية'},
+    {t:'المحور الثاني: سؤال للنقاش'},
+    {t:'عرض مرئي وطني',video:{src:'media/v10.mp4',r:[33.775,0,31.641,100]}},
+    {t:'المحور الثالث: الشائعات والتطرف الفكري وأثرهما في المجتمع'},
+    {t:'المحور الثالث: التثبت منهجٌ قرآني'},
+    {t:'المحور الثالث: سؤال للنقاش'},
+    {t:'عرض مرئي وطني',video:{src:'media/v14.mp4',r:[34.1,0,31.641,100]}},
+    {t:'المحور الرابع: كيف تكون الطالبة حارسةً للأمن الفكري؟'},
+    {t:'المحور الرابع: مسؤولية مشتركة'},
+    {t:'دراسة ميدانية'},
+    {t:'نتائج الاستبيان'},
+    {t:'فقرة تفاعلية: ماذا لو كنتِ مكانها؟ (المواقف ١–٣)'},
+    {t:'فقرة تفاعلية: ماذا لو كنتِ مكانها؟ (المواقف ٤–٥)'},
+    {t:'عرض مرئي وطني',video:{src:'media/v21.mp4',r:[32.485,0,31.641,100]}},
+    {t:'ختام الندوة'},
+    {t:'حفظ الله وطننا'},
+    {t:'إعداد الطالبات وإشراف المعلمة'}
+  ];
+  (function(){
+    var stage=$('#stage');if(!stage)return;
+    var frame=$('#frame'),media=$('#media'),thumbs=$('#thumbs');
+    var front=$('#slA'),back=$('#slB'),cur=0,seq=0,N=SLIDES.length;
+    function pad(n){return (n<10?'0':'')+n;}
+    function src(i){return 'deck/s'+pad(i+1)+'.jpg';}
+    function place(el,r){el.style.left=r[0]+'%';el.style.top=r[1]+'%';el.style.width=r[2]+'%';el.style.height=r[3]+'%';}
+    SLIDES.forEach(function(s,i){
+      var b=document.createElement('button');b.type='button';b.className='th';
+      b.setAttribute('aria-label','الشريحة '+ar(i+1)+': '+s.t);
+      b.innerHTML='<img src="deck/t'+pad(i+1)+'.jpg" alt="" loading="lazy" width="320" height="180"><span class="tn">'+ar(i+1)+'</span>'+((s.video||s.audio)?'<span class="tm"><svg viewBox="0 0 10 10"><path d="M3 2l5 3-5 3z"/></svg></span>':'');
+      b.addEventListener('click',function(){go(i);});
+      thumbs.appendChild(b);
+    });
+    var ths=$$('.th',thumbs);
+    function stopMedia(){$$('video,audio',media).forEach(function(m){try{m.pause();}catch(e){}});media.innerHTML='';}
+    function buildMedia(i){
+      stopMedia();var s=SLIDES[i];
+      if(s.video){
+        var box=document.createElement('div');box.className='mbox';place(box,s.video.r);
+        box.innerHTML='<button class="play" type="button" aria-label="تشغيل المقطع المرئي"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><span class="mlabel">تشغيل المقطع</span>';
+        $('.play',box).addEventListener('click',function(){
+          var v=document.createElement('video');v.src=s.video.src;v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='auto';
+          box.innerHTML='';box.appendChild(v);var p=v.play();if(p&&p.catch)p.catch(function(){});
+        });
+        media.appendChild(box);
+      }
+      if(s.audio){
+        var ab=document.createElement('button');ab.type='button';ab.className='abtn';ab.setAttribute('aria-label','تشغيل التسجيل الصوتي');place(ab,s.audio.r);
+        ab.innerHTML='<span class="alabel">استمع للتسجيل</span>';
+        var au=document.createElement('audio');au.src=s.audio.src;au.preload='none';
+        ab.addEventListener('click',function(){
+          if(au.paused){var p=au.play();if(p&&p.catch)p.catch(function(){});ab.classList.add('on');$('.alabel',ab).textContent='إيقاف التسجيل';}
+          else{au.pause();ab.classList.remove('on');$('.alabel',ab).textContent='استمع للتسجيل';}
+        });
+        au.addEventListener('ended',function(){ab.classList.remove('on');$('.alabel',ab).textContent='استمع للتسجيل';});
+        media.appendChild(ab);media.appendChild(au);
+      }
+    }
+    function preload(i){if(i<0||i>=N)return;var im=new Image();im.src=src(i);}
+    function ui(){
+      $('#dCount').textContent=ar(cur+1)+' / '+ar(N);
+      $('#dTitle').textContent=SLIDES[cur].t;
+      $('#dProg').style.width=((cur+1)/N*100)+'%';
+      ['#dPrev','#dPrev2'].forEach(function(s){$(s).disabled=cur===0;});
+      ['#dNext','#dNext2'].forEach(function(s){$(s).disabled=cur===N-1;});
+      ths.forEach(function(t,k){t.classList.toggle('on',k===cur);if(k===cur)t.setAttribute('aria-current','true');else t.removeAttribute('aria-current');});
+      var t=ths[cur],tr=t.getBoundingClientRect(),sr=thumbs.getBoundingClientRect();
+      var delta=(tr.left+tr.width/2)-(sr.left+sr.width/2);
+      if(Math.abs(delta)>4)thumbs.scrollBy({left:delta,behavior:reduce?'auto':'smooth'});
+    }
+    function go(i,dir){
+      if(i<0||i>=N||i===cur)return;
+      if(dir===undefined)dir=i>cur?1:-1;
+      cur=i;var tok=++seq;stopMedia();
+      var inc=back,out=front;
+      inc.style.transition='none';inc.style.opacity='0';inc.style.transform='translateX('+(dir>0?-3:3)+'%)';
+      inc.src=src(i);inc.alt='الشريحة '+ar(i+1)+': '+SLIDES[i].t;
+      var ready=inc.decode?inc.decode():new Promise(function(r){inc.onload=r;inc.onerror=r;});
+      ready.catch(function(){}).then(function(){
+        if(tok!==seq)return;
+        void inc.offsetWidth;
+        inc.style.transition='';inc.style.opacity='';inc.style.transform='';
+        inc.classList.add('cur');inc.removeAttribute('aria-hidden');
+        out.classList.remove('cur');out.setAttribute('aria-hidden','true');out.style.transform='translateX('+(dir>0?3:-3)+'%)';
+        front=inc;back=out;buildMedia(i);
+      });
+      ui();preload(i+1);preload(i-1);
+    }
+    $('#dNext').addEventListener('click',function(){go(cur+1);});
+    $('#dPrev').addEventListener('click',function(){go(cur-1);});
+    $('#dNext2').addEventListener('click',function(){go(cur+1);});
+    $('#dPrev2').addEventListener('click',function(){go(cur-1);});
+    stage.addEventListener('keydown',function(e){
+      var k=e.key;
+      if(k===' '&&e.target!==stage)return;
+      if(k==='ArrowLeft'||k==='PageDown'||k===' '){e.preventDefault();go(cur+1);}
+      else if(k==='ArrowRight'||k==='PageUp'){e.preventDefault();go(cur-1);}
+      else if(k==='Home'){e.preventDefault();go(0);}
+      else if(k==='End'){e.preventDefault();go(N-1);}
+    });
+    var sx=null,sy=0;
+    frame.addEventListener('pointerdown',function(e){if(e.target.closest('.mbox,.abtn'))return;sx=e.clientX;sy=e.clientY;});
+    frame.addEventListener('pointerup',function(e){
+      if(sx===null)return;var dx=e.clientX-sx,dy=e.clientY-sy;sx=null;
+      if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))go(cur+(dx>0?1:-1));
+    });
+    var fs=$('#dFull'),d=document;
+    if(!(d.fullscreenEnabled||d.webkitFullscreenEnabled))fs.hidden=true;
+    fs.addEventListener('click',function(){
+      if(d.fullscreenElement||d.webkitFullscreenElement){(d.exitFullscreen||d.webkitExitFullscreen).call(d);return;}
+      var req=stage.requestFullscreen||stage.webkitRequestFullscreen;
+      if(req){try{var p=req.call(stage);if(p&&p.catch)p.catch(function(){});}catch(err){}stage.focus();}
+    });
+    buildMedia(0);ui();preload(1);
+  })();
+
+  /* ---- lightbox ---- */
+  var shots=[
+    {src:'img/invitation.jpg',t:'بطاقة الدعوة',d:'«ندعوكم بكل الحب لحضور عرضنا» يوم الثلاثاء الساعة ٩:٣٠'},
+    {src:'img/reception.jpg',t:'ركن الاستقبال والضيافة',d:'القهوة والتمر والورد الأبيض بانتظار الضيفات، مع شاشة العرض الافتتاحية'},
+    {src:'img/hall.jpg',t:'قاعة الندوة',d:'الشريحة الافتتاحية «الأمن الفكري والمواطنة الفكرية» على شاشة العرض'},
+    {src:'img/attendance.jpg',t:'توثيق حضور أولياء الأمور',d:'كشف الحضور بالأسماء والتوقيعات'}
+  ];
+  var lb=$('#lb'),cur=0,lastFocus=null;
+  function show(i){
+    cur=(i+shots.length)%shots.length;var s=shots[cur];
+    $('#lbImg').src=s.src;$('#lbImg').alt=s.t;$('#lbTitle').textContent=s.t;$('#lbText').textContent=s.d;
+    $('#lbCount').textContent=ar(cur+1)+' / '+ar(shots.length);
+  }
+  function openLb(i){lastFocus=document.activeElement;show(i);lb.hidden=false;document.documentElement.style.overflow='hidden';$('#lbClose').focus();}
+  function closeLb(){lb.hidden=true;document.documentElement.style.overflow='';if(lastFocus)lastFocus.focus();}
+  $$('[data-i]').forEach(function(b){b.addEventListener('click',function(){openLb(+b.getAttribute('data-i'));});});
+  $('#lbClose').addEventListener('click',closeLb);
+  $('#lbNext').addEventListener('click',function(){show(cur+1);});
+  $('#lbPrev').addEventListener('click',function(){show(cur-1);});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.tagName==='FIGURE')closeLb();});
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden)return;
+    if(e.key==='Escape')closeLb();
+    else if(e.key==='ArrowLeft')show(cur+1);
+    else if(e.key==='ArrowRight')show(cur-1);
+  });
+})();
+</script>
+
+</body></html>
